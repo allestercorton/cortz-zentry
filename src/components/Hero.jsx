@@ -14,7 +14,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 3;
+  const totalVideos = 4;
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -121,6 +121,7 @@ const Hero = () => {
             muted
             id='next-video'
             className='absolute-center invisible absolute z-20 size-64 object-cover object-center'
+            onLoadedData={handleVideoLoad}
           />
 
           <video
